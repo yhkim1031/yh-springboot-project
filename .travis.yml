@@ -18,9 +18,9 @@ before_install:
   - chmod +x gradlew
 
 before_deploy:
-  - zip -r yh-springboot-webservice yh-springboot-project
+  - zip -r yh-springboot-project *
   - mkdir -p deploy
-  - mv yh-springboot-webservice.zip deploy/yh-springboot-webservice.zip
+  - mv yh-springboot-project.zip deploy/yh-springboot-project.zip
 
 deploy:
   - provider: s3
