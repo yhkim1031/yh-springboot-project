@@ -46,9 +46,9 @@ public class OAuthAttributes {
         Map<String, Object> response = (Map<String, Object>) attributes.get("response");
 
         return OAuthAttributes.builder()
-                .name((String) attributes.get("name"))
-                .email((String) attributes.get("email"))
-                .picture((String) attributes.get("picture"))
+                .name((String) response.get("name"))
+                .email((String) response.get("email"))
+                .picture((String) response.get("picture"))
                 .attributes(response)
                 .nameAttributeKey(userNameAttributeName)
                 .build();
